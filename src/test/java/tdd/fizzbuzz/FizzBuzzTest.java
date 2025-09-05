@@ -38,4 +38,15 @@ public class FizzBuzzTest {
         //Then
         assertEquals("FizzBuzz",result);
     }
+
+    @Test
+    public void should_return_normal_number_when_countOff_normal_number(){
+        //Given
+        int number = 2;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        //When
+        String result = fizzBuzz.countOff(number);
+        //Then
+        assertEquals("2",result);
+    }
 }
