@@ -5,8 +5,17 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
-    private final String Buzz = "Buzz";
-    private final String FizzBuzz = "FizzzBuzz";
+
+    @Test
+    public void should_return_Buzz_when_countOff_multiple_3(){
+        //Given
+        int number = 3;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        //When
+        String result = fizzBuzz.countOff(number);
+        //Then
+        assertEquals("Fizz",result);
+    }
 
     @Test
     public void should_return_Buzz_when_countOff_multiple_5(){
@@ -16,7 +25,7 @@ public class FizzBuzzTest {
         //When
         String result = fizzBuzz.countOff(number);
         //Then
-        assertEquals(Buzz,result);
+        assertEquals("Buzz",result);
     }
 
     @Test
@@ -27,6 +36,6 @@ public class FizzBuzzTest {
         //When
         String result = fizzBuzz.countOff(number);
         //Then
-        assertEquals(FizzBuzz,result);
+        assertEquals("FizzBuzz",result);
     }
 }
